@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webrtc-demo</title>
+</head>
+<body>
+  <video autoplay width="400" height="300" id="localVideo"></video>
+  <video autoplay width="400" height="300" id="captureVideo"></video>
+  <div>
+    <button id="screenshot">截图</button>
+    <button id="screenshare">开启屏幕共享</button>
+    <button id="localRecord">开始本端录制</button>
+    <button id="captureRecord">开始屏幕共享录制</button>
+    <button id="mergeRecord">开始合并录制</button>
+  </div>
+
+  <script src="./before.js"></script>
+  <script src="./mergeRecord2.js"></script>
+</body>
+</html>
