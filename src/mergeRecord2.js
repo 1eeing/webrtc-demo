@@ -21,6 +21,15 @@
   function startMergeRecord() {
     mergeRecorderBuffer = []
 
+    const options = {
+      mimeType: 'video/webm;codecs=vp8'
+    }
+
+    if (!MediaRecorder.isTypeSupported(options.mimeType)) {
+      console.error(`${options.mimeType} is not supported`)
+      return
+    }
+
     mergeCanvas = document.createElement('canvas')
     mergeCanvas.width = localVideo.width + captureVideo.width + 100
     mergeCanvas.height = Math.max(localVideo.height, captureVideo.height)
@@ -38,7 +47,7 @@
 
     mergeStream = mergeCanvas.captureStream(25)
 
-    mergeRecorder = new global.MediaRecorder(mergeStream)
+    mergeRecorder = new global.MediaRecorder(mergeStream, options)
     mergeRecorder.ondataavailable = global.handleDataAvailable.bind(this, mergeRecorderBuffer)
     mergeRecorder.start(10)
   }
