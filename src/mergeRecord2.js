@@ -18,11 +18,6 @@
 
   let mergeRecorder
 
-  /**
-   * canvas转视频
-   * 第一种方案：手动拼接 blob 再下载
-   * 行不通，因为看上去 canvas.toBlob() 无法将 blob 的类型指定为视频格式
-   */
   function startMergeRecord() {
     mergeRecorderBuffer = []
 
