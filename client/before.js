@@ -163,12 +163,19 @@
         frameRate: 15,
         facingMode: 'environment'
       },
-      audio: false
+      audio: {
+        // 自动增益
+        autoGainControl: true,
+        // 回声消除
+        echoCancellation: true,
+        // 噪声抑制
+        noiseSuppression: true,
+      }
     }
 
     const stream = await global.navigator.mediaDevices.getUserMedia(constraints)
     localVideo.srcObject = stream
-    localStream = stream
+    global.localStream = localStream = stream
   }
 
   main()

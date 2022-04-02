@@ -1,0 +1,27 @@
+{
+  "name": "webrtc-demo",
+  "version": "1.0.0",
+  "description": "一些 webrtc 相关的操作练习",
+  "main": "index.js",
+  "scripts": {
+    "client": "node client/app.js",
+    "server": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1eeing/webrtc-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1eeing/webrtc-demo/issues"
+  },
+  "homepage": "https://github.com/1eeing/webrtc-demo#readme",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "express": "^4.17.3",
+    "prettyjson": "^1.2.5"
+  }
+}
