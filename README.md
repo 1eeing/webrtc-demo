@@ -13,7 +13,7 @@
 
 ## 快速启动
 
-### 1. 安装到本地，并安装依赖
+### 1. 下载到本地，并安装依赖
 ```bash
 $ git clone git@github.com:1eeing/webrtc-demo.git && cd webrtc-demo && npm install
 ```
