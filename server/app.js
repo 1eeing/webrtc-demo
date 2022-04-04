@@ -40,6 +40,10 @@ io.on('connection', (socket) => {
   socket.on('candidate', (room, candidate) => {
     socket.to(room).emit('candidate', room, candidate)
   })
+
+  socket.on('fileInfo', (room, data) => {
+    socket.to(room).emit('fileInfo', room, data)
+  })
 })
 
 const port = 3000

@@ -23,6 +23,21 @@
     <h2>----- webrtc 连接 -----</h2>
     <input id="roomId" type="text" placeholder="输入房间号">
     <button id="joinRoom">加入房间</button>
+    <button id="printStats">打印数据统计</button>
+  </div>
+  <div id="dataChannelContainer">
+    <h2>----- dataChannel -----</h2>
+    <div>
+      <textarea placeholder="文字展示区" style="width:300px;height:150px;resize:none;" id="dataChannelRead" disabled></textarea>
+    </div>
+    <div>
+      <textarea placeholder="文字输入区" style="width:300px;height:150px;resize:none;" id="dataChannelWrite"></textarea>
+    </div>
+    <div>
+      <button id="sendText">发送文字</button>
+      <input id="uploadFile" type="file">
+      <button id="sendFile">发送文件</button>
+    </div>
   </div>
 
   <script src="./before.js"></script>
